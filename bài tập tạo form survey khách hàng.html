@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form survey</title>
+    <style>
+
+    </style>
+</head>
+<h2 id="h1">Market Research Survey</h2>
+<div> Please take a few moments to complete this satisfaction survey.</div>
+<body class="woofoo">
+<style>
+    .woofoo{
+        font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
+    }
+</style>
+<form action="https://gallery.wufoo.com/forms/?formname=pyej3161l9pt0d&embed=1&embedKey=pyej3161l9pt0d89279"
+      method="get">
+    <br>
+    What is your age range?
+    <br>
+    <select name="agerange" style="width: 250px">
+        <option value="18-24">18-24</option>
+        <option value="25-34">25-34</option>
+        <option value="35-50">35-50</option>
+        <option value="50+">50+</option>
+    </select>
+    <br>
+    What is your yearly income range?
+    <br>
+    <select name="incomerange" style="width: 250px">
+
+        <option value="$0-$25000">$0-%25000</option>
+        <option value="$25001-$50000">$25001-$50000</option>
+        <option value="$50001-$100000">$50001-$100000</option>
+        <option value="$100000+">$100000</option>
+    </select>
+    <br>
+    Gender identity
+    <br>
+    <input type="radio" name="gender" id="input1" value="male">male
+    <br>
+    <input type="radio" name="gender" id="input2" value="female">female
+    <br>
+    <input type="radio" name="gender" id="input3" value="nonbinary">nonbinary
+    <br>
+    <input type="radio" id="radio1" name="gender">other
+    <br>
+    <input type="text" id="text1" name="other" oninput="txt()" style="margin-left: 20px">
+    <br>
+
+    <table id="bang1" style="visibility: hidden">
+        <tr>
+            <td>Maximum of 250 characters</td>
+            <td style="width: 20px"></td>
+            <td id="bang2"><i>Currently Used: <span id="num"> 0 </span>characters</i></td>
+        </tr>
+    </table>
+    <br>
+    Which of the following products have your purchased in the last 2 months. Please check all that apply.
+    <br>
+    <input type="checkbox"  name="product1"> Product1
+    <br>
+    <input type="checkbox" name="product2"> Product2
+    <br>
+    <input type="checkbox" name="product3"> Product3
+
+</form>
+<script>
+    radio1.onchange = function () {
+        if (this.checked) {
+            bang1.style.visibility = "visible"
+        }
+        input1.onchange = function () {
+            if (input1.checked) {
+                bang1.style.visibility = "hidden"
+            }
+            input2.onchange = function () {
+                if (input2.checked) {
+                    bang1.style.visibility = "hidden"
+                }
+                input3.onchange = function () {
+                    if (input3.checked) {
+                        bang1.style.visibility = "hidden";
+                    }
+
+                }
+            }
+        }
+    }
+
+
+    function txt() {
+        let str = document.getElementById("text1").value.length;
+        document.getElementById("num").innerHTML = str;
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuyen doi tien te</title>
+</head>
+<body>
+<span style="margin-left: 120px">Amount</span>
+<span style="margin-left: 170px">From currency</span>
+<span style="margin-left: 190px">To currency</span>
+<br> 
+<input type="number" id="amount">
+<select name="cur1" id="cur1">
+    <option value="23000">USD</option>
+    <option value="1">VND</option>
+    <option value="26500">EUR</option>
+</select>
+<select name="cur2" id="cur2">
+    <option value="23000">USD</option>
+    <option value="1">VND</option>
+    <option value="26500">EUR</option>
+</select>
+<button id="button1" onclick="convert1()">Convert</button>
+<br>
+<div id="ketqua"></div>
+<style>
+    #amount{
+        width: 100px;
+        margin-left: 100px;
+
+    }
+    #cur1{
+        width: 70px;
+        margin-left: 150px;
+    }
+    #cur2{
+        width: 70px;
+        margin-left: 200px;
+    }
+</style>
+<script>
+    function convert1() {
+        let a = +document.getElementById("cur1").value;
+        let b = +document.getElementById("cur2").value;
+        let c = +document.getElementById("amount").value;
+        let d = c*a/b;
+        document.getElementById("ketqua").innerHTML = "Result :" +d;
+
+    }
+
+</script>
+</body>
+</html>
